@@ -1,10 +1,7 @@
-body{
-    background-color: antiquewhite;
-}
 .mood-selector{
-    height: 40vh;
+    height: 30vh;
     max-width: 40rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: 1px solid #ccc;
     background-color :whitesmoke;
 }
@@ -26,9 +23,9 @@ body{
     margin: 0;
 }
 .mood-selector-content{
-    height: 20vh;
+    height: 9vh;
     width: 100%;
-    gap: 1.5rem;
+    gap: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,14 +36,14 @@ body{
     background-color: #1e1b4b;
     color: black;
     border: 2px solid transparent;
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
     transition: all 0.2s ease-in;
 }
 
 .mood-selector-content button:hover{
     color: black;
-    box-shadow: 0 0 5px 0.1px gold;
+    box-shadow: 0 0 4px 0.1px gold;
     transform: scale(1.05);
 }
 .mood-selector-content button.selected {
@@ -59,5 +56,5 @@ body{
     font-size: 2rem;
 }
 .mood-selector-content button h2{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }

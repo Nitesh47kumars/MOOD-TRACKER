@@ -28,7 +28,7 @@ const MoodTracker = ({selectedMood}) => {
 
         <div className='moodtracker-textarea'>
           <textarea 
-          rows={5} 
+          rows={4} 
           value={msg} onChange={(e)=>setMsg(e.target.value)} 
           placeholder='Write About Your Day...'
           />
