@@ -1,5 +1,6 @@
 import React from "react";
 import './MoodSelector.css'
+import MoodTracker from "./MoodTracker";
 
 const moods = [
   { id: "amazing", emoji: "😁", label: "Amazing", color: "#a3e635" }, // green
@@ -10,6 +11,10 @@ const moods = [
 ];
 
 export function MoodSelector({ selectedMood, onSelectMood }) {
+
+  const onMoodClick = (moodLabel) =>{
+    onSelectMood(moodLabel);
+  }
   return (
     <>
       <div className="mood-selector">
@@ -21,7 +26,7 @@ export function MoodSelector({ selectedMood, onSelectMood }) {
         <div className="mood-selector-content">
           {moods.map((mood)=>(
             <button key={mood.id}
-              onClick={()=>onSelectMood(mood.label)}
+              onClick={()=>onMoodClick(mood.label)}
               className={selectedMood === mood.label? "selected":""}
               style={{ backgroundColor: selectedMood === mood.label ? mood.color : mood.color+33 ,border:`2px solid ${mood.color}`}}
               >
@@ -31,6 +36,7 @@ export function MoodSelector({ selectedMood, onSelectMood }) {
           ))}
         </div>
       </div>
+      <MoodTracker/>
     </>
   );
 }
