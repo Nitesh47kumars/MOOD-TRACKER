@@ -1,13 +1,21 @@
 .calendar {
+    height: 32rem;
     width: 100%;
-    max-width:500px;
-    margin: 1rem 0;
+    max-width:600px;
     background-color: whitesmoke;
     padding: 15px;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
 }
-  
+.calender-head p{
+    font-size: 0.8rem;
+}
+
+.calender-head h2{
+    font-weight: 900;
+}
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -39,15 +47,19 @@
     
 }
 
+.calendar-days{
+    height:100%;
+}
 
 .weekday {
     text-align: center;
     font-size: 0.9rem;
+    font-weight:600;
     color: black;
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.6rem;
     background-color: white;
 }
 
@@ -55,9 +67,9 @@
     text-align: center;
     padding: 8px;
     border-radius: 4px;
-    cursor: pointer;
     border: 1px solid #ccc;
     background-color: white;
+    cursor: pointer;
 }
 
 .day:hover {

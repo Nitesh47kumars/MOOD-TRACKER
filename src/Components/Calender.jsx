@@ -53,6 +53,11 @@ function SimpleCalendar({ selectedDate, setSelectedDate }) {
 
   return (
     <div className="calendar textarea-like-border">
+        <div className='calender-head'>
+          <h2>Select The Date</h2>
+          <p>Choose the date for your Mood Entry</p>
+        </div>
+      
       <div className="calendar-header">
         <button onClick={prevMonth}>{'<'}</button>
         <span>{monthName} {year}</span>
