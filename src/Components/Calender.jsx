@@ -45,6 +45,8 @@ function SimpleCalendar({ selectedDate, onDateChange }) {
           onClick={() => onDateChange(new Date(year, month, i))}
         >
         {i}
+
+        
         </div>
     );
   }

@@ -27,7 +27,7 @@ const MoodTracker = ({selectedMood}) => {
       <div className='moodtracker'>
         <div className='moodtracker-header'>
           <h1>Jounral Entry</h1>
-          <p>Your Selected Mood:<strong>{selectedMood||"None"}</strong></p>
+          <p>Your Selected Mood:<strong>{selectedMood||" None"}</strong></p>
         </div>
 
         <div className='moodtracker-textarea'>

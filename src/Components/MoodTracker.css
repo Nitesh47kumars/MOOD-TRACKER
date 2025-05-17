@@ -23,11 +23,13 @@
     margin-top: 1rem;
 }
 .moodtracker-textarea textarea{
+    outline: none;
     padding: 7px;
     border-radius: 7px;
     width: 100%;
     border: none;
     border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
 }
 .moodtracker-textarea button{
     border: none;

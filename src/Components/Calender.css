@@ -14,14 +14,23 @@
     align-items: center;
     font-weight: bold;
     margin-bottom: 1rem;
+    gap: 2px;
 }
   
 .calendar-header button{
-    padding: 5px 1.5rem;
+    padding: 5px 1.65rem;
     border-radius: 0.4rem;
     border:1px solid #ccc;
     background-color: white;
 
+}
+.calendar-header span{
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0.4rem;
+    background-color: white;
 }
 .calendar-weekdays , .calendar-days {
     display: grid;
@@ -35,10 +44,11 @@
     text-align: center;
     font-size: 0.9rem;
     color: black;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 1rem;
     padding: 0.5rem;
+    background-color: white;
 }
 
 .day {
