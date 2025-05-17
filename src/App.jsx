@@ -4,8 +4,8 @@ import Navbar from './Components/Navbar';
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 import StatusBar from './Components/StatusBar';
 import MoodTracker from './Components/MoodTracker';
+import Home from './Components/Home';
 const App = () => {
-  const [selectMood,setSelectMood] = useState("");
   const [mode,setMode] = useState(false);
   return (
     <>
@@ -13,8 +13,7 @@ const App = () => {
         <Navbar mode={mode} setMode={setMode} />
         <StatusBar/>
           <Routes>
-            <Route path='/' element={<MoodSelector selectedMood={selectMood} onSelectMood={setSelectMood} />} />
-            
+            <Route path='/' element={<Home mode={mode} setMode={setMode}/>} />
           </Routes>
       </Router>
     </>

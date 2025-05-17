@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Calender.css'
 
-function SimpleCalendar({ selectedDate, onDateChange }) {
+function SimpleCalendar({ selectedDate, setSelectedDate }) {
   const [date, setDate] = useState(new Date());
 
   const year = date.getFullYear();
@@ -42,7 +42,7 @@ function SimpleCalendar({ selectedDate, onDateChange }) {
         <div
           key={i}
           className={`day ${isSelected ? 'selected' : ''}`}
-          onClick={() => onDateChange(new Date(year, month, i))}
+          onClick={() => setSelectedDate(new Date(year, month, i))}
         >
         {i}
 

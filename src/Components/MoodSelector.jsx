@@ -10,10 +10,10 @@ const moods = [
   { id: "awful", emoji: "😭", label: "Awful", color: "#ef4444" },     // red
 ];
 
-export function MoodSelector({ selectedMood, onSelectMood }) {
+export function MoodSelector({ selectMood, setSelectMood }) {
 
   const onMoodClick = (moodLabel) =>{
-    onSelectMood(moodLabel);
+    setSelectMood(moodLabel);
   }
   return (
     <>
@@ -27,8 +27,8 @@ export function MoodSelector({ selectedMood, onSelectMood }) {
           {moods.map((mood)=>(
             <button key={mood.id}
               onClick={()=>onMoodClick(mood.label)}
-              className={selectedMood === mood.label? "selected":""}
-              style={{ backgroundColor: selectedMood === mood.label ? mood.color : mood.color+33 ,border:`2px solid ${mood.color}`}}
+              className={selectMood === mood.label? "selected":""}
+              style={{ backgroundColor: selectMood === mood.label ? mood.color : mood.color+33 ,border:`2px solid ${mood.color}`}}
               >
               <span>{mood.emoji}</span>
               <h2>{mood.label}</h2>
@@ -36,7 +36,6 @@ export function MoodSelector({ selectedMood, onSelectMood }) {
           ))}
         </div>
       </div>
-      <MoodTracker/>
     </>
   );
 }

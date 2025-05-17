@@ -3,7 +3,7 @@ body{
 }
 .mood-selector{
     height: 40vh;
-    min-width: 40rem;
+    max-width: 40rem;
     border-radius: 1rem;
     border: 1px solid #ccc;
     background-color :whitesmoke;

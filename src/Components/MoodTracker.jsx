@@ -6,10 +6,6 @@ const MoodTracker = ({selectedMood}) => {
     const [msg,setMsg] = useState("");
     const [message,setMessage] = useState([]);
 
-
-
-    const [selectedDate, setSelectedDate] = useState(new Date());
-
     const onSaveHandle = () =>{
         if(!msg.trim()) return;
 
@@ -27,7 +23,7 @@ const MoodTracker = ({selectedMood}) => {
       <div className='moodtracker'>
         <div className='moodtracker-header'>
           <h1>Jounral Entry</h1>
-          <p>Your Selected Mood:<strong>{selectedMood||" None"}</strong></p>
+          <p>Your Selected Mood:<strong>{ selectedMood||" None"}</strong></p>
         </div>
 
         <div className='moodtracker-textarea'>
@@ -40,7 +36,6 @@ const MoodTracker = ({selectedMood}) => {
         </div>
 
       </div>
-      <Calender selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
     </>
   )
 }
