@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
+import Calender from './Calender'
 import './MoodTracker.css'
 
 const MoodTracker = ({selectedMood}) => {
     const [msg,setMsg] = useState("");
     const [message,setMessage] = useState([]);
+
+
+
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
     const onSaveHandle = () =>{
         if(!msg.trim()) return;
@@ -35,6 +40,7 @@ const MoodTracker = ({selectedMood}) => {
         </div>
 
       </div>
+      <Calender selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
     </>
   )
 }
