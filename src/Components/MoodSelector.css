@@ -1,0 +1,62 @@
+body{
+    background-color: antiquewhite;
+}
+.mood-selector{
+    height: 40vh;
+    min-width: 40rem;
+    color: white;
+    border-radius: 1rem;
+    background-color :whitesmoke;
+}
+.mood-selector-header{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+.mood-selector-header p{
+    font-size: 0.8rem;
+    margin: 0;
+}
+.mood-selector-header h1{
+    font-size: 1.8rem;
+    margin: 0;
+}
+.mood-selector-content{
+    height: 20vh;
+    width: 100%;
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.mood-selector-content button{
+    border-radius: 1.3rem;
+    background-color: #1e1b4b;
+    color: black;
+    border: 2px solid transparent;
+    height: 6rem;
+    width: 6rem;
+    transition: all 0.2s ease-in;
+}
+
+.mood-selector-content button:hover{
+    color: black;
+    box-shadow: 0 0 5px 0.1px gold;
+    transform: scale(1.05);
+}
+.mood-selector-content button.selected {
+    border-color: white;
+    transform: scale(1.1);
+  }
+.mood-selector-content button span {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+}
+.mood-selector-content button h2{
+    font-size: 1rem;
+}
