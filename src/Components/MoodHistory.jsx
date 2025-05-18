@@ -14,12 +14,23 @@ const MoodHistory = () => {
     setEntry(saved);
   },[]);
 
+  const handleClearHistory = () => {
+    if(confirm("Are you sure You want to clear All History")){
+      localStorage.removeItem("moodEntry");
+      setEntry([]);
+    }
+  }
+
   return (
 
     <>
         <div className='container'>
             <div className='moodhistory'>
+              <div className='moodhistory-header'>
                 <h2>Mood History</h2>
+                <button onClick={()=>handleClearHistory()}>ClearAllHistory</button>
+
+              </div>
 
                 <ul className='moodhistory-content'>
                     {entry.length === 0 ? (

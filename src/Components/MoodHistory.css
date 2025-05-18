@@ -6,10 +6,33 @@
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.6);
 
 }
-.moodhistory h2{
-    margin: 0rem 0.6rem;
-    margin-bottom: 1.2rem;
+.moodhistory-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 71.5%;
+    margin-bottom: 1rem;
+}
+.moodhistory-header button{
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.6);
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 0.6rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+
+}
+.moodhistory-header button:hover{
+    background-color: rgb(233, 0, 0);
+    box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.6);
+
+
+}
+.moodhistory-header h2{
     font-weight: 800;
+
 }
 .moodhistory-content{
     background-color: #DDDDDD;
