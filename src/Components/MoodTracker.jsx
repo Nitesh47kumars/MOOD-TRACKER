@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Calender from './Calender'
 import './MoodTracker.css'
 
 const MoodTracker = ({selectedMood}) => {
     const [msg,setMsg] = useState("");
     const [message,setMessage] = useState([]);
+
+    useEffect(()=>{
+      const savedata = JSON.parse(localStorage.getItem("moodEntries"))|| []
+      setMessage(savedata);
+    },[]);
 
     const onSaveHandle = () =>{
         if(!msg.trim()) return;
@@ -14,8 +19,13 @@ const MoodTracker = ({selectedMood}) => {
             text: msg,
             date: new Date().toLocaleDateString()
         }
+          
 
-        setMessage([newEntry,...message]);
+
+        const update = [newEntry,...message]
+        localStorage.setItem("moodEntries",JSON.stringify(update))
+
+        setMessage(update);
         setMsg("");
     };
   return (

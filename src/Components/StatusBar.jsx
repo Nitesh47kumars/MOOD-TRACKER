@@ -17,10 +17,6 @@ const StatusBar = () => {
                   History
               </NavLink>
 
-              <NavLink to="/stats" className={({ isActive }) => isActive ? "active" : "tab"}>
-                  Statistics
-              </NavLink>
-
             </section>
         </div>
       </div>
