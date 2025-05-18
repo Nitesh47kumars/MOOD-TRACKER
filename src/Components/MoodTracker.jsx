@@ -10,6 +10,10 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
   const [msg,setMsg] = useState("");
   const [message,setMessage] = useState([]);
 
+  const [clicked, setClicked] = useState(false); 
+
+
+
   useEffect(()=>{
     const savedata = JSON.parse(localStorage.getItem("moodEntry"))|| []
     setMessage(savedata);
@@ -32,7 +36,24 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
       setMessage(update);
       setMsg("");
       setSelectedMood("")
+
+      setClicked(true);
+      setTimeout(() => {
+      setClicked(false);
+      }, 1000);
   };
+
+  const getButtonText = () => {
+    if (clicked) return "Your Mood is Added...";
+    if (!selectedMood && !msg.trim()) return "Select mood and describe your day";
+    if (selectedMood && !msg.trim()) return "Describe your day";
+    if(!selectedMood && msg.trim()) return "Please select Your Mood"
+    if (selectedMood && msg.trim()) return "Save Entry";
+    return "Save Entry";
+  }
+
+
+
   return (
     <>
       <div className={`moodtracker ${animate ? "animate" : ""} ${theme ? "dark" :""}`}>
@@ -47,7 +68,7 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
           value={msg} onChange={(e)=>setMsg(e.target.value)} 
           placeholder='Write About Your Day...'
           />
-          <button onClick={()=>onSaveHandle()} disabled={!msg.trim() || !selectedMood}>Save Entry</button>
+          <button onClick={()=>onSaveHandle()} disabled={!msg.trim() || !selectedMood} className={clicked? "clicked" :""}>{getButtonText()}</button>
         </div>
 
       </div>
