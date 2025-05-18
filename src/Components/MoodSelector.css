@@ -5,13 +5,16 @@
     border: 1px solid #ccc;
     background-color :whitesmoke;
     padding: 1rem;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.6);
+
+    animation: landingMoodSelector 4s ease forwards;
 }
 .mood-selector-header{
     color: black;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .mood-selector-header p{
     font-size: 0.8rem;
@@ -23,7 +26,7 @@
     margin: 0;
 }
 .mood-selector-content{
-    height: 9vh;
+    height: 14vh;
     width: 100%;
     gap: 2.5rem;
     display: flex;
@@ -59,3 +62,14 @@
     font-size: 0.8rem;
 }
 
+@keyframes landingMoodSelector {
+    0% {
+        opacity: 0;
+        transform: translateX(30px) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+}
+  
