@@ -48,29 +48,27 @@ function SimpleCalendar({theme, selectedDate, setSelectedDate }) {
       selectedDate?.getDate() === i;
 
     days.push(
-        <div
-          key={i}
-          className={`day ${isSelected ? 'selected' : ''}`}
-          onClick={() => setSelectedDate(new Date(year, month, i))}
-        >
-        {i}
+        <div key={i} className={`day ${isSelected ? 'selected' : ''}`} >{i}</div>
+    )
 
-        
-        </div>
-    );
   }
 
   return (
     <div className={`calendar ${animate? "animate" : ""} ${theme ? "dark" :""} textarea-like-border`}>
+
         <div className='calender-head'>
+          
           <h2>Select The Date</h2>
           <p>Choose the date for your Mood Entry</p>
+
         </div>
       
       <div className="calendar-header">
+
         <button onClick={prevMonth}>{'<'}</button>
         <span>{monthName} {year}</span>
         <button onClick={nextMonth}>{'>'}</button>
+
       </div>
 
       <div className="calendar-weekdays">
@@ -79,9 +77,7 @@ function SimpleCalendar({theme, selectedDate, setSelectedDate }) {
         ))}
       </div>
 
-      <div className="calendar-days">
-        {days}
-      </div>
+      <div className="calendar-days">{days}</div>
     </div>
   );
 }
