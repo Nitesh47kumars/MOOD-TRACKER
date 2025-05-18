@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
 import './Calender.css'
+import { useAnimation } from './useAnimation';
 
 function SimpleCalendar({ selectedDate, setSelectedDate }) {
+
+  const animate = useAnimation("calendar");
+
+
   const [date, setDate] = useState(new Date());
 
+
+
   const year = date.getFullYear();
+
   const month = date.getMonth();
 
 
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
+
 
   const monthName = date.toLocaleString('default', { month: 'long' });
 
@@ -52,7 +61,7 @@ function SimpleCalendar({ selectedDate, setSelectedDate }) {
   }
 
   return (
-    <div className="calendar textarea-like-border">
+    <div className={`calendar ${animate? "animate" : ""} textarea-like-border`}>
         <div className='calender-head'>
           <h2>Select The Date</h2>
           <p>Choose the date for your Mood Entry</p>

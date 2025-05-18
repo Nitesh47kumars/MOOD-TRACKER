@@ -1,36 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import Calender from './Calender'
 import './MoodTracker.css'
+import { useAnimation } from './useAnimation'
 
 const MoodTracker = ({selectedMood}) => {
-    const [msg,setMsg] = useState("");
-    const [message,setMessage] = useState([]);
 
-    useEffect(()=>{
-      const savedata = JSON.parse(localStorage.getItem("moodEntry"))|| []
-      setMessage(savedata);
-    },[]);
+  const animate = useAnimation("landingMoodTracker");
 
-    const onSaveHandle = () =>{
-        if(!msg.trim()) return;
+  const [msg,setMsg] = useState("");
+  const [message,setMessage] = useState([]);
 
-        const newEntry = {
-            mood : selectedMood,
-            text: msg,
-            date: new Date().toLocaleString()
-        }
-          
+  useEffect(()=>{
+    const savedata = JSON.parse(localStorage.getItem("moodEntry"))|| []
+    setMessage(savedata);
+  },[]);
+
+  const onSaveHandle = () =>{
+      if(!msg.trim()) return;
+
+      const newEntry = {
+          mood : selectedMood,
+          text: msg,
+          date: new Date().toLocaleString()
+      }
+        
 
 
-        const update = [newEntry,...message]
-        localStorage.setItem("moodEntry",JSON.stringify(update))
+      const update = [newEntry,...message]
+      localStorage.setItem("moodEntry",JSON.stringify(update))
 
-        setMessage(update);
-        setMsg("");
-    };
+      setMessage(update);
+      setMsg("");
+  };
   return (
     <>
-      <div className='moodtracker'>
+      <div className={`moodtracker ${animate ? "animate" : ""}`}>
         <div className='moodtracker-header'>
           <h1>Journal Entry</h1>
           <p>Your Selected Mood:<strong>{ selectedMood||" None"}</strong></p>

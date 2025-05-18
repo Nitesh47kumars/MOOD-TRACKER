@@ -10,7 +10,11 @@
     flex-direction: column;
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.6);
 
+}
+
+.calendar.animate{
     animation: landingCalender 3s ease forwards;
+
 }
 .calender-head p{
     font-size: 0.8rem;

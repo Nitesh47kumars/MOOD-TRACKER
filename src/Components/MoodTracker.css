@@ -8,7 +8,10 @@
     border: 1px solid #ccc;
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.6);
 
+}
+.moodtracker.animate{
     animation: landingMoodTracker 4s ease forwards;
+
 }
 .moodtracker-header{
     margin: 0;
