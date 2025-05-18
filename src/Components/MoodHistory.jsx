@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './MoodHistory.css'
 
 const MoodHistory = () => {
@@ -7,23 +7,36 @@ const MoodHistory = () => {
     { id: 2, mood: '😔 bad', date: 'May 15, 2025 7:45 PM', note: 'Felt a bit low in the evening.' },
     { id: 3, mood: '😐 good', date: 'May 14, 2025 9:00 AM', note: 'Just an average morning.' },
   ];
+  const [entry,setEntry] = useState([]);
+
+  useEffect(() =>{
+    const saved = JSON.parse(localStorage.getItem('moodEntry'))|| [];
+    setEntry(saved);
+  },[]);
+
   return (
+
     <>
         <div className='container'>
             <div className='moodhistory'>
                 <h2>Mood History</h2>
 
                 <ul className='moodhistory-content'>
+                    {entry.length === 0 ? (
+                        <p>No Past Data</p>
+                    )
+                    :
+                    (
+                        entry.map((data,idx)=>(
+                            <li key={idx} className='moodhistory-data'>
 
-                    {dummyData.map((data) =>(
-                        <li key={data.id} className='moodhistory-data'>
+                                <span>{data.mood} - </span>
+                                <span>{data.date}</span>
+                                <p>{data.text}</p>
 
-                            <span>{data.mood} - </span>
-                            <span>{data.date}</span>
-                            <p>{data.note}</p>
-
-                        </li>
-                    ))}
+                            </li>
+                        ))
+                    )}
 
                 </ul>
             </div>

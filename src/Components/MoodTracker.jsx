@@ -7,7 +7,7 @@ const MoodTracker = ({selectedMood}) => {
     const [message,setMessage] = useState([]);
 
     useEffect(()=>{
-      const savedata = JSON.parse(localStorage.getItem("moodEntries"))|| []
+      const savedata = JSON.parse(localStorage.getItem("moodEntry"))|| []
       setMessage(savedata);
     },[]);
 
@@ -17,13 +17,13 @@ const MoodTracker = ({selectedMood}) => {
         const newEntry = {
             mood : selectedMood,
             text: msg,
-            date: new Date().toLocaleDateString()
+            date: new Date().toLocaleString()
         }
           
 
 
         const update = [newEntry,...message]
-        localStorage.setItem("moodEntries",JSON.stringify(update))
+        localStorage.setItem("moodEntry",JSON.stringify(update))
 
         setMessage(update);
         setMsg("");
@@ -32,7 +32,7 @@ const MoodTracker = ({selectedMood}) => {
     <>
       <div className='moodtracker'>
         <div className='moodtracker-header'>
-          <h1>Jounral Entry</h1>
+          <h1>Journal Entry</h1>
           <p>Your Selected Mood:<strong>{ selectedMood||" None"}</strong></p>
         </div>
 
