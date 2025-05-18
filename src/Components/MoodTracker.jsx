@@ -68,7 +68,7 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
           value={msg} onChange={(e)=>setMsg(e.target.value)} 
           placeholder='Write About Your Day...'
           />
-          <button onClick={()=>onSaveHandle()} disabled={!msg.trim() || !selectedMood} className={clicked? "clicked" :""}>{getButtonText()}</button>
+          <button onClick={()=>onSaveHandle()} disabled={!msg.trim() || !selectedMood} className={`${clicked ? "clicked" :""} ${selectedMood && msg.trim()? "ready":""}`}>{getButtonText()}</button>
         </div>
 
       </div>

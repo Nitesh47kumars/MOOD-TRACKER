@@ -52,12 +52,19 @@
 
 .moodtracker-textarea button:disabled{
     cursor:not-allowed;
+    opacity: 0.55;
 }
 
-.moodtracker-textarea button.clicked {
-    background-color: red;
+.moodtracker-textarea button.ready {
+    background-color: green;
+    border-color: greenyellow;
     color: white;
-    border-color: darkred;
+  }
+
+.moodtracker-textarea button.clicked {
+    background-color: green;
+    color: white;
+    border-color: greenyellow;
 }
 
 
@@ -91,9 +98,9 @@
 }
 
 .moodtracker.dark .moodtracker-textarea button.clicked {
-    background-color: red;
+    background-color: green;
     color: white;
-    border-color: darkred;
+    border-color: greenyellow;
 }
 
 
