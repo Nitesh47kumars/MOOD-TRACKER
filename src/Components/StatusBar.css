@@ -1,17 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 0 !important;         /* solving padding issue*/
+    padding-right: 0 !important;
+}
 .statusbar{
-    background-color: #F5F7F8;
+    background-color: rgba(255, 255, 255, 0.866);
     margin: 1rem 0rem;
-    gap: 0.2rem;
+    gap: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3px;
+
+    padding: 6px 0px;
+    padding-left: 6px;      /* fix padding cause Getting padding from Nowhere*/
+    padding-right: 6px;    
+
+    border: none;
     border-radius: 3px;
 }
 .tab{
     opacity: 0.5;
-    background-color: #F5F7F8;
+    background-color: whitesmoke;
     transition: 0.3s;
+    padding: 0.5rem;
+    border: none;
+
+}
+.active{
+    padding: 0.5rem;
+    border: 1px solid #ccc;
 }
 .statusbar a{
     text-align: center;
@@ -23,4 +43,5 @@
     border: none;
     background-color: white;
     border-radius: 2px;
+    padding:  0.5rem;
 }

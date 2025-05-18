@@ -9,7 +9,7 @@ const StatusBar = () => {
         <div className='container'>
             <section className='statusbar'>
 
-              <NavLink to="/" className={({ isActive }) => isActive ? "active" : "tab"}>
+              <NavLink to="/" className={({ isActive }) => isActive ? "active " : "tab"}>
                   Track Mood
               </NavLink>
 
