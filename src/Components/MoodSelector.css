@@ -38,7 +38,7 @@
     border: 2px solid transparent;
     height: 5rem;
     width: 5rem;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
 }
 
 .mood-selector-content button:hover{
@@ -49,7 +49,7 @@
 .mood-selector-content button.selected {
     border-color: white;
     transform: scale(1.1);
-  }
+}
 .mood-selector-content button span {
     height: 50px;
     width: 50px;
@@ -58,3 +58,4 @@
 .mood-selector-content button h2{
     font-size: 0.8rem;
 }
+

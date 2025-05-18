@@ -30,6 +30,7 @@
     border: none;
     border: 1px solid #ccc;
     margin-bottom: 0.5rem;
+    resize: none;
 }
 .moodtracker-textarea button{
     border: none;
