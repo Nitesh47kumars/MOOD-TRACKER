@@ -11,6 +11,14 @@ const App = () => {
   const [mode, setMode] = useState(false);
   const [selectedMood, setSelectedMood] = useState("");
 
+  useEffect(()=>{
+    const body = document.body;
+
+    body.classList.remove('lightTheme','darkTheme');
+
+    body.classList.add(mode? "darkTheme" :"lightTheme");
+  },[mode]);
+
   useEffect(() => {
     const handleBeforeUnload = () => {
       sessionStorage.clear();

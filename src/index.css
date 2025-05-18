@@ -7,18 +7,36 @@
     }
 }
 body {
-    background: linear-gradient(180deg,#C33764 ,#1D2671);
-
-    background-size: 600% 600%;
-    animation: animate 4s ease-in-out forwards;
     min-height: 100vh;
 }
-@keyframes animate {
+
+
+.lightTheme{
+    background: linear-gradient(180deg,#1D2671,#C33764 );
+    background-size: 600% 600%;
+    animation: lightTheme 0.8s ease-in-out forwards;
+
+}
+.darkTheme{
+    background: linear-gradient(180deg,#1D2671,#C33764 );
+    background-size: 600% 600%;
+    animation: darkTheme 0.8s ease-in-out forwards;
+}
+@keyframes lightTheme {
     0% {
         background-position: 0% 0%;
     }
     100% {
         background-position: 0% 100%;
+    }
+}
+
+@keyframes darkTheme {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
     }
 }
 
