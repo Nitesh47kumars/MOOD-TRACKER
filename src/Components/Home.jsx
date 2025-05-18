@@ -17,7 +17,7 @@ const Home = ({mode,setMode}) => {
             <div className='col-6'>
                 <div className=''>
                     <MoodSelector theme={mode} selectMood={selectMood} setSelectMood={setSelectMood}/>
-                    <MoodTracker theme={mode} selectedMood={selectMood}/>
+                    <MoodTracker theme={mode} selectedMood={selectMood} setSelectedMood={setSelectMood} />
                 </div>
             </div>
         </div>

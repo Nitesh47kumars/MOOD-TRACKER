@@ -3,7 +3,7 @@ import Calender from './Calender'
 import './MoodTracker.css'
 import { useAnimation } from './useAnimation'
 
-const MoodTracker = ({theme,selectedMood}) => {
+const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
 
   const animate = useAnimation("landingMoodTracker");
 
@@ -31,6 +31,7 @@ const MoodTracker = ({theme,selectedMood}) => {
 
       setMessage(update);
       setMsg("");
+      setSelectedMood("")
   };
   return (
     <>
@@ -46,7 +47,7 @@ const MoodTracker = ({theme,selectedMood}) => {
           value={msg} onChange={(e)=>setMsg(e.target.value)} 
           placeholder='Write About Your Day...'
           />
-          <button onClick={()=>onSaveHandle()} disabled={!msg.trim()}>Save Entry</button>
+          <button onClick={()=>onSaveHandle()} disabled={!msg.trim() || !selectedMood}>Save Entry</button>
         </div>
 
       </div>

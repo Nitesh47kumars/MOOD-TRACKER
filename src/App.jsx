@@ -9,14 +9,16 @@ import MoodHistory from './Components/MoodHistory';
 
 const App = () => {
   const [mode, setMode] = useState(false);
+  const [selectedMood, setSelectedMood] = useState("");
 
-  // Clear sessionStorage on full page reload
   useEffect(() => {
     const handleBeforeUnload = () => {
-      sessionStorage.clear(); // Or remove specific keys if needed
+      sessionStorage.clear();
+
     };
 
     window.addEventListener('beforeunload', handleBeforeUnload);
+
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
@@ -28,7 +30,7 @@ const App = () => {
         <Navbar mode={mode} setMode={setMode} />
         <StatusBar theme={mode} />
         <Routes>
-          <Route path='/' element={<Home mode={mode} setMode={setMode} />} />
+          <Route path='/' element={<Home mode={mode} setMode={setMode} selectedMood={selectedMood} setSelectedMood={setSelectedMood} />} />
           <Route path='/history' element={<MoodHistory theme={mode} />} />
         </Routes>
       </Router>

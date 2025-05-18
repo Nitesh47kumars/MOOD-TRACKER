@@ -18,7 +18,11 @@ export function MoodSelector({ theme, selectMood, setSelectMood }) {
   );
 
   const onMoodClick = (moodLabel) =>{
-    setSelectMood(moodLabel);
+    if (selectMood === moodLabel) {
+      setSelectMood("");
+    } else {
+      setSelectMood(moodLabel);
+    }
   }
   return (
     <>
