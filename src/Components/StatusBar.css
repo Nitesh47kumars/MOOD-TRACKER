@@ -23,6 +23,9 @@
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.6);
 
 
+    transition: background-color 0.8s ease-in-out, border 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+
+
 }
 .statusbar.animate{
     animation: landingStatusBar 4s ease forwards ;
@@ -50,7 +53,6 @@
     border: none;
     background-color: white;
     border-radius: 2px;
-    padding:  0.5rem;
 }
 
 
@@ -61,6 +63,11 @@
 .statusbar.dark {
     background-color: #000B58;
     box-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.3);
+
+
+    transition: background-color 0.8s ease-in-out, border 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+
+
 }
 
 
@@ -83,6 +90,10 @@
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+
+/* .statusbar.dark .tab,.tab{
+    padding-bottom: 0;
+} */
 
 @keyframes landingStatusBar {
     0% {

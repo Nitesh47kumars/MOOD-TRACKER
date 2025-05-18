@@ -5,6 +5,10 @@
     border-radius: 3px;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.6);
 
+
+    transition: background-color 0.8s ease-in-out, border 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+
+    
 }
 .moodhistory.animate{
     animation: landingMoodHistory 4s  ease forwards;
@@ -85,6 +89,11 @@
     background-color: #000B58;
     color: #f5f5f5;
     box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+
+
+    transition: background-color 0.8s ease-in-out, border 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+
+
 }
 
 .moodhistory.dark .moodhistory-header h2 {
