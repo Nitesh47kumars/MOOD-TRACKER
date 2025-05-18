@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 body {
     background: linear-gradient(180deg,#C33764 ,#1D2671);
 
-    background-size: 300% 300%;
+    background-size: 600% 600%;
     animation: animate 8s ease-in-out infinite;
     min-height: 100vh;
 }

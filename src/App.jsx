@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 import StatusBar from './Components/StatusBar';
 import MoodTracker from './Components/MoodTracker';
 import Home from './Components/Home';
+import MoodHistory from './Components/MoodHistory';
 const App = () => {
   const [mode,setMode] = useState(false);
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <StatusBar/>
           <Routes>
             <Route path='/' element={<Home mode={mode} setMode={setMode}/>} />
+            <Route path='/history' element={<MoodHistory/>}/>
           </Routes>
       </Router>
     </>
