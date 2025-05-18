@@ -6,6 +6,9 @@
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.6);
 
 }
+.moodhistory.animate{
+    animation: landingMoodHistory 4s  ease forwards;
+}
 .moodhistory-header{
     display: flex;
     align-items: center;
@@ -119,4 +122,19 @@
 
 .moodhistory.dark .moodhistory-data p {
     color: #d4d4d4;
+}
+
+
+
+
+
+@keyframes landingMoodHistory {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.99);
+    }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

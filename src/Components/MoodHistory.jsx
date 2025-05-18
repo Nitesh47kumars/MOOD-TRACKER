@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './MoodHistory.css'
+import { useAnimation } from './useAnimation';
 
 const MoodHistory = ({theme}) => {
+
+  const animate = useAnimation()
   const dummyData = [
     { id: 1, mood: '😁 Amazing', date: 'May 16, 2025 10:30 AM', note: 'Great day at work!' },
     { id: 2, mood: '😔 bad', date: 'May 15, 2025 7:45 PM', note: 'Felt a bit low in the evening.' },
@@ -25,7 +28,7 @@ const MoodHistory = ({theme}) => {
 
     <>
         <div className='container'>
-            <div className={`moodhistory ${theme ? "dark": ""}`}>
+            <div className={`moodhistory ${animate? "animate" :""} ${theme ? "dark": ""}`}>
               <div className='moodhistory-header'>
                 <h2>Mood History</h2>
                 <button onClick={()=>handleClearHistory()}>ClearAllHistory</button>
