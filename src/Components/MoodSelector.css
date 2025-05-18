@@ -65,6 +65,57 @@
     font-size: 0.8rem;
 }
 
+
+
+/* dark mode */
+
+
+.mood-selector.dark {
+    background-color: #000B58;
+    border: 1px solid #404258;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.6);
+}
+
+/* Corrected selector */
+.mood-selector.dark .mood-selector-header {
+    color: #f5f5f5;
+}
+
+/* Dark mode button adjustments */
+.mood-selector.dark .mood-selector-content button {
+    color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effects in dark mode */
+.mood-selector.dark .mood-selector-content button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 6px 1px gold;
+}
+
+/* Selected button style in dark mode */
+.mood-selector.dark .mood-selector-content button.selected {
+    border-color: white;
+    transform: scale(1.1);
+}
+
+/* Emoji and label in dark mode */
+.mood-selector.dark .mood-selector-content button span {
+    color: #f5f5f5;
+}
+
+.mood-selector.dark .mood-selector-content button h2 {
+    color: #f5f5f5;
+}
+
+
+
+
+
 @keyframes landingMoodSelector {
     0% {
         opacity: 0;

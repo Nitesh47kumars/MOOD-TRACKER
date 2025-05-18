@@ -11,10 +11,10 @@ const moods = [
   { id: "awful", emoji: "😭", label: "Awful", color: "#ef4444" },     // red
 ];
 
-export function MoodSelector({ selectMood, setSelectMood }) {
+export function MoodSelector({ theme, selectMood, setSelectMood }) {
 
   const animate = useAnimation(
-    
+
   );
 
   const onMoodClick = (moodLabel) =>{
@@ -22,7 +22,7 @@ export function MoodSelector({ selectMood, setSelectMood }) {
   }
   return (
     <>
-      <div className={`mood-selector ${animate ? "animate" : ""}`}>
+      <div className={`mood-selector ${animate ? "animate" : ""} ${theme ? "dark":""}`}>
         <div className="mood-selector-header">
           <h1>How are you Feel Today?</h1>
           <p>Select The Mood That Best Describes How You Feel</p>

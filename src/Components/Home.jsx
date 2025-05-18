@@ -12,12 +12,12 @@ const Home = ({mode,setMode}) => {
       <div className='container mt-4'>
         <div className='row'>
             <div className='col-6'>
-                <Calender selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+                <Calender theme={mode} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
             </div>
             <div className='col-6'>
                 <div className=''>
-                    <MoodSelector selectMood={selectMood} setSelectMood={setSelectMood}/>
-                    <MoodTracker selectedMood={selectMood}/>
+                    <MoodSelector theme={mode} selectMood={selectMood} setSelectMood={setSelectMood}/>
+                    <MoodTracker theme={mode} selectedMood={selectMood}/>
                 </div>
             </div>
         </div>

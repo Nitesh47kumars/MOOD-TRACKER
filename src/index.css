@@ -7,7 +7,7 @@
     }
 }
 body {
-    background: linear-gradient(180deg,#1D2671,#C33764 );
+    background: linear-gradient(180deg,#C33764 ,#1D2671);
 
     background-size: 600% 600%;
     animation: animate 4s ease-in-out forwards;

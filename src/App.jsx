@@ -26,10 +26,10 @@ const App = () => {
     <>
       <Router>
         <Navbar mode={mode} setMode={setMode} />
-        <StatusBar />
+        <StatusBar theme={mode} />
         <Routes>
           <Route path='/' element={<Home mode={mode} setMode={setMode} />} />
-          <Route path='/history' element={<MoodHistory />} />
+          <Route path='/history' element={<MoodHistory theme={mode} />} />
         </Routes>
       </Router>
     </>

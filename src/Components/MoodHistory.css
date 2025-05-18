@@ -69,3 +69,54 @@
     margin: 0.6rem 0.2rem;
     font-size: 0.8rem;
 }
+
+
+
+
+/* dark mode */
+
+
+
+
+.moodhistory.dark {
+    background-color: #1D267D;
+    color: #f5f5f5;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.moodhistory.dark .moodhistory-header h2 {
+    color: #f5f5f5;
+}
+
+.moodhistory.dark .moodhistory-header button {
+    background-color: #e11d48; 
+    color: #fff;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.moodhistory.dark .moodhistory-header button:hover {
+    background-color: #be123c;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.moodhistory.dark .moodhistory-content {
+    background-color: #2E3578;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.moodhistory.dark .moodhistory-data {
+    background-color: #3a3f88;
+    box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.moodhistory.dark .moodhistory-data span:nth-child(1) {
+    color: #facc15; 
+}
+
+.moodhistory.dark .moodhistory-data span:nth-child(2) {
+    color: #e0e0e0;
+}
+
+.moodhistory.dark .moodhistory-data p {
+    color: #d4d4d4;
+}

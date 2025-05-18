@@ -3,7 +3,7 @@ import Calender from './Calender'
 import './MoodTracker.css'
 import { useAnimation } from './useAnimation'
 
-const MoodTracker = ({selectedMood}) => {
+const MoodTracker = ({theme,selectedMood}) => {
 
   const animate = useAnimation("landingMoodTracker");
 
@@ -34,7 +34,7 @@ const MoodTracker = ({selectedMood}) => {
   };
   return (
     <>
-      <div className={`moodtracker ${animate ? "animate" : ""}`}>
+      <div className={`moodtracker ${animate ? "animate" : ""} ${theme ? "dark" :""}`}>
         <div className='moodtracker-header'>
           <h1>Journal Entry</h1>
           <p>Your Selected Mood:<strong>{ selectedMood||" None"}</strong></p>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calender.css'
 import { useAnimation } from './useAnimation';
 
-function SimpleCalendar({ selectedDate, setSelectedDate }) {
+function SimpleCalendar({theme, selectedDate, setSelectedDate }) {
 
   const animate = useAnimation("calendar");
 
@@ -61,7 +61,7 @@ function SimpleCalendar({ selectedDate, setSelectedDate }) {
   }
 
   return (
-    <div className={`calendar ${animate? "animate" : ""} textarea-like-border`}>
+    <div className={`calendar ${animate? "animate" : ""} ${theme ? "dark" :""} textarea-like-border`}>
         <div className='calender-head'>
           <h2>Select The Date</h2>
           <p>Choose the date for your Mood Entry</p>
