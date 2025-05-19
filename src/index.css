@@ -6,10 +6,10 @@
         display: none;
     }
 }
+
 body {
     min-height: 100vh;
 }
-
 
 .lightTheme{
     background: linear-gradient(180deg,#150485,#C33764 );
@@ -17,11 +17,14 @@ body {
     animation: lightTheme 0.8s ease-in-out forwards;
 
 }
+
 .darkTheme{
     background: linear-gradient(180deg,#150485,#C33764 );
     background-size: 600% 600%;
     animation: darkTheme 0.8s ease-in-out forwards;
 }
+
+
 @keyframes lightTheme {
     0% {
         background-position: 0% 0%;
@@ -30,6 +33,7 @@ body {
         background-position: 0% 100%;
     }
 }
+
 
 @keyframes darkTheme {
     0% {
@@ -40,4 +44,4 @@ body {
     }
 }
 
-  
+

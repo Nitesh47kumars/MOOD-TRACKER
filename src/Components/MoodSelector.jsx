@@ -1,6 +1,5 @@
 import React from "react";
 import './MoodSelector.css'
-import MoodTracker from "./MoodTracker";
 import { useAnimation } from "./useAnimation";
 
 const moods = [
@@ -13,37 +12,44 @@ const moods = [
 
 export function MoodSelector({ theme, selectMood, setSelectMood }) {
 
-  const animate = useAnimation(
-
-  );
+  const animate = useAnimation();
 
   const onMoodClick = (moodLabel) =>{
+
     if (selectMood === moodLabel) {
       setSelectMood("");
     } else {
       setSelectMood(moodLabel);
     }
+
   }
+
   return (
     <>
       <div className={`mood-selector ${animate ? "animate" : ""} ${theme ? "dark":""}`}>
+
         <div className="mood-selector-header">
           <h1>How are you Feel Today?</h1>
           <p>Select The Mood That Best Describes How You Feel</p>
         </div>
 
         <div className="mood-selector-content">
+
           {moods.map((mood)=>(
             <button key={mood.id}
               onClick={()=>onMoodClick(mood.label)}
               className={selectMood === mood.label? "selected":""}
               style={{ backgroundColor: selectMood === mood.label ? mood.color : mood.color+33 ,border:`2px solid ${mood.color}`}}
               >
+
               <span>{mood.emoji}</span>
               <h2>{mood.label}</h2>
+              
             </button>
           ))}
+          
         </div>
+
       </div>
     </>
   );

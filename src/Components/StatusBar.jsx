@@ -4,11 +4,14 @@ import {NavLink } from 'react-router-dom'
 import { useAnimation } from './useAnimation'
 
 const StatusBar = ({theme}) => {
+
   const animate = useAnimation("");
+
   return (
     <>
       <div className='container-fluid'>
         <div className='container'>
+
             <section className={`statusbar ${animate ? "animate" : ""} ${theme ? "dark" : ""}`}>
 
               <NavLink to="/" className={({ isActive }) => isActive ? "active " : "tab"}>
@@ -20,6 +23,7 @@ const StatusBar = ({theme}) => {
               </NavLink>
 
             </section>
+            
         </div>
       </div>
     </>

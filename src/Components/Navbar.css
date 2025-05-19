@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
 }
+
 .navbar-title{
     text-decoration: none;
     font-size: 2rem;
     font-weight: 900;
 }
+
 .navbar{
     height: 5rem;
 }
+
 .toggle{
     height: 2rem;
     width: 4rem;
@@ -20,6 +23,7 @@
     cursor: pointer;
     border: none;
 }
+
 .circle{
     height: 25px;
     width: 25px;
@@ -29,12 +33,15 @@
     align-items: center;
     justify-content: center;
 }
+
 .circle span{
     font-size: 0.6rem;
 }
+
 .speed{
     transition: all 0.2s ease-in;
 }
+
 .ON{
     font-weight: 600;
     background-color: rgb(1, 242, 1);
@@ -43,6 +50,7 @@
     transition: all 0.3s ease-in;
     border: 3px solid rgb(49, 176, 49);
 }
+
 .OFF{
     font-weight: 600;
     background-color: rgb(173, 5, 5);

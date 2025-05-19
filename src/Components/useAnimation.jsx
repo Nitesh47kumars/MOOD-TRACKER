@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 
 export function useAnimation(componentKey = "default") {
+
   const storageKey = `hasAnimated-${componentKey}`;
   const [animateOnLoad, setAnimateOnLoad] = useState(false);
 
   useEffect(() => {
+    
     const navEntry = performance.getEntriesByType("navigation")[0];
     const navType = navEntry?.type || performance.navigation.type;
 
