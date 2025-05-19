@@ -1,5 +1,5 @@
 import React from 'react'
-import './StatusBar.css'
+import '../CSSFiles/StatusBar.css'
 import {NavLink } from 'react-router-dom'
 import { useAnimation } from './useAnimation'
 

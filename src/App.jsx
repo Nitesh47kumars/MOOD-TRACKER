@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/JSXFiles/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import StatusBar from './Components/StatusBar';
-import Home from './Components/Home';
-import MoodHistory from './Components/MoodHistory';
+import StatusBar from './Components/JSXFiles/StatusBar';
+import Home from './Components/JSXFiles/Home';
+import MoodHistory from './Components/JSXFiles/MoodHistory';
 
 const App = () => {
 
@@ -46,7 +46,7 @@ const App = () => {
 
           <Route path='/' element={<Home mode={mode} setMode={setMode} selectedMood={selectedMood} setSelectedMood={setSelectedMood} />} />
           <Route path='/history' element={<MoodHistory theme={mode} />} />
-          
+
         </Routes>
 
       </Router>

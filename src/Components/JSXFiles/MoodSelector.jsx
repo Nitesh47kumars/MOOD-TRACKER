@@ -1,5 +1,5 @@
 import React from "react";
-import './MoodSelector.css'
+import '../CSSFiles/MoodSelector.css'
 import { useAnimation } from "./useAnimation";
 
 const moods = [

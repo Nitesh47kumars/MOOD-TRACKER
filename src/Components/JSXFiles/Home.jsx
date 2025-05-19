@@ -30,7 +30,7 @@ const Home = ({mode,setMode}) => {
             </div>
 
         </div>
-        
+
       </div>
     </>
   )
