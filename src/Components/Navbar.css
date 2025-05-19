@@ -40,7 +40,7 @@
     background-color: rgb(1, 242, 1);
     color: white;
     transform: translateX(2.05rem);
-    transition: all 0.240s ease-in;
+    transition: all 0.3s ease-in;
     border: 3px solid rgb(49, 176, 49);
 }
 .OFF{
@@ -48,6 +48,6 @@
     background-color: rgb(173, 5, 5);
     color: white;
     transform: translateX(0px);
-    transition: all 0.240s ease-in;
+    transition: all 0.3s ease-in;
     border: 3px solid rgb(193, 11, 11);
 }

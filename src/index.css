@@ -12,13 +12,13 @@ body {
 
 
 .lightTheme{
-    background: linear-gradient(180deg,#1D2671,#C33764 );
+    background: linear-gradient(180deg,#150485,#C33764 );
     background-size: 600% 600%;
     animation: lightTheme 0.8s ease-in-out forwards;
 
 }
 .darkTheme{
-    background: linear-gradient(180deg,#1D2671,#C33764 );
+    background: linear-gradient(180deg,#150485,#C33764 );
     background-size: 600% 600%;
     animation: darkTheme 0.8s ease-in-out forwards;
 }
