@@ -110,6 +110,14 @@
     border-color: greenyellow;
 }
 
+
+.moodtracker.dark .moodtracker-textarea button.ready {
+    background-color: green;
+    border-color: greenyellow;
+    color: white;
+}
+
+
 .moodtracker.dark .moodtracker-textarea button {
     background-color: #22232a;
     border: 1px solid #f5f5f5;
