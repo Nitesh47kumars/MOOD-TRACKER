@@ -25,7 +25,7 @@ const Navbar = ({mode,setMode}) => {
         <div className='container-fluid'>
           
             <Link className='nav-brand navbar-title text-uppercase' to="/" style={mode?darktheme:lighttheme} >
-             mood tracker</Link>
+             Mood-Sync</Link>
 
             <div className='toggle speed' onClick={()=>onToggleClicked()} style={{backgroundColor: `${mode? "green": "red"}`}}>
 
