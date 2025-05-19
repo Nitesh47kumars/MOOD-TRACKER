@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { MoodSelector } from './MoodSelector'
-import Calender from './Calender'
-import MoodTracker from './MoodTracker'
+import { MoodSelector } from './MOODSELECTORFILES/MoodSelector'
+import Calender from './CALENDERFILES/Calender'
+import MoodTracker from './MOODTRACKERFILES/MoodTracker'
 
 const Home = ({mode,setMode}) => {
 

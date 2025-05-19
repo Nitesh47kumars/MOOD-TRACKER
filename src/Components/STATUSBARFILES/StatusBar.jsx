@@ -1,7 +1,7 @@
 import React from 'react'
-import '../CSSFiles/StatusBar.css'
+import './StatusBar.css'
 import {NavLink } from 'react-router-dom'
-import { useAnimation } from './useAnimation'
+import { useAnimation } from '../useAnimation'
 
 const StatusBar = ({theme}) => {
 

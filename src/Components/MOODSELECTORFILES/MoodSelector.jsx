@@ -1,6 +1,6 @@
 import React from "react";
-import '../CSSFiles/MoodSelector.css'
-import { useAnimation } from "./useAnimation";
+import './MoodSelector.css'
+import { useAnimation } from "../useAnimation";
 
 const moods = [
   { id: "amazing", emoji: "😁", label: "Amazing", color: "#a3e635" }, // green

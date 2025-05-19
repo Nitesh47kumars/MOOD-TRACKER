@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../CSSFiles/Calender.css'
-import { useAnimation } from './useAnimation';
+import './Calender.css'
+import { useAnimation } from '../useAnimation';
 
 function SimpleCalendar({theme, selectedDate, setSelectedDate,  markedDates = [] }) {
 

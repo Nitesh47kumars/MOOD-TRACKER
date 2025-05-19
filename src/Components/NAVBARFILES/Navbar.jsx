@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../CSSFiles/Navbar.css'
+import './Navbar.css'
 
 const Navbar = ({mode,setMode}) => {
 

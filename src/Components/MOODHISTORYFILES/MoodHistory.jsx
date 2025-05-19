@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../CSSFiles/MoodHistory.css'
-import { useAnimation } from './useAnimation';
+import './MoodHistory.css'
+import { useAnimation } from '../useAnimation';
 
 const MoodHistory = ({theme}) => {
 

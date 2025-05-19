@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../CSSFiles/MoodTracker.css'
-import { useAnimation } from './useAnimation'
+import './MoodTracker.css'
+import { useAnimation } from '../useAnimation'
 
 const MoodTracker = ({theme,selectedMood,setSelectedMood,selectedDate ,setMarkedDates}) => {
 

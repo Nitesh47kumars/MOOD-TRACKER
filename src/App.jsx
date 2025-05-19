@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Components/JSXFiles/Navbar';
+import Navbar from './Components/NAVBARFILES/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import StatusBar from './Components/JSXFiles/StatusBar';
-import Home from './Components/JSXFiles/Home';
-import MoodHistory from './Components/JSXFiles/MoodHistory';
+import StatusBar from './Components/STATUSBARFILES/StatusBar';
+import Home from './Components/Home';
+import MoodHistory from './Components/MOODHISTORYFILES/MoodHistory';
 
 const App = () => {
 
