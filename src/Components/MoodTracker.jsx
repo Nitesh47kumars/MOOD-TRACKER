@@ -3,7 +3,8 @@ import Calender from './Calender'
 import './MoodTracker.css'
 import { useAnimation } from './useAnimation'
 
-const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
+const MoodTracker = ({theme,selectedMood,setSelectedMood,selectedDate ,setMarkedDates}) => {
+
 
   const animate = useAnimation("landingMoodTracker");
 
@@ -13,19 +14,31 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
   const [clicked, setClicked] = useState(false); 
 
 
+  
+
+
 
   useEffect(()=>{
     const savedata = JSON.parse(localStorage.getItem("moodEntry"))|| []
     setMessage(savedata);
+    
+
+
+    const savedDates = savedata.map(entry => entry.date);
+    setMarkedDates(savedDates);
+
+
   },[]);
 
   const onSaveHandle = () =>{
       if(!msg.trim()) return;
 
+      const entryDate = selectedDate.toDateString();
+
       const newEntry = {
           mood : selectedMood,
           text: msg,
-          date: new Date().toLocaleString()
+          date: entryDate
       }
         
 
@@ -34,6 +47,8 @@ const MoodTracker = ({theme,selectedMood,setSelectedMood}) => {
       localStorage.setItem("moodEntry",JSON.stringify(update))
 
       setMessage(update);
+      setMarkedDates(update.map(entry=>entry.date))
+
       setMsg("");
       setSelectedMood("")
 

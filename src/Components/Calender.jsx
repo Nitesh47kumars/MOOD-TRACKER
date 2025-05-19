@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calender.css'
 import { useAnimation } from './useAnimation';
 
-function SimpleCalendar({theme, selectedDate, setSelectedDate }) {
+function SimpleCalendar({theme, selectedDate, setSelectedDate,  markedDates = [] }) {
 
   const animate = useAnimation("calendar");
 
@@ -41,14 +41,23 @@ function SimpleCalendar({theme, selectedDate, setSelectedDate }) {
 
   for (let i = 1; i <= daysInMonth; i++) {
 
+    const currentDate = new Date(year, month, i).toDateString();
+    const isMarked = markedDates.includes(currentDate);
+ 
+
     const isSelected =
 
     selectedDate?.getFullYear() === year &&
-      selectedDate?.getMonth() === month &&
-      selectedDate?.getDate() === i;
+    selectedDate?.getMonth() === month &&
+    selectedDate?.getDate() === i;
+
+
+    const handleClick = () =>{
+      setSelectedDate(new Date(year,month ,i));
+    }
 
     days.push(
-        <div key={i} className={`day ${isSelected ? 'selected' : ''}`} >{i}</div>
+        <div key={i} className={`day ${isSelected ? 'selected' : ''} ${isMarked ? "marked" :""}`} onClick={()=>handleClick()} >{i}</div>
     )
 
   }

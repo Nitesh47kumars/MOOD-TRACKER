@@ -91,6 +91,15 @@
 }
 
 
+
+
+.day.marked {
+    background-color: #9EFFA3;
+    border-color: #6adf75;
+}
+  
+
+
 /* Dark mode theme */
 
 .calendar.dark {
@@ -127,7 +136,13 @@
     color: white;
 }
 
-
+.calendar.dark .day.marked {
+    
+    background-color: #2CFF81;
+    color: black;
+    border-color: #1fb565;
+}
+  
 
 
 @keyframes landingCalender {
